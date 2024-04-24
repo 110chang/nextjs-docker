@@ -9,10 +9,10 @@ export default function Header() {
         <Link href="/">Home</Link>
       </h1>
       <nav className="flex gap-2 ml-4">
-        <Link href="/posts">Posts</Link>
-        <Link href="/todos">Todos</Link>
-        <Link href="/comments">Comments</Link>
-        <Link href="/users">Users</Link>
+        <Link href="/posts">Posts (SSG/ISR)</Link>
+        <Link href="/todos">Todos (SSR)</Link>
+        <Link href="/comments">Comments (force CSR)</Link>
+        <Link href="/users">Users (On demand ISR)</Link>
       </nav>
     </header>
   );

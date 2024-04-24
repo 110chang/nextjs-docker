@@ -5,6 +5,7 @@ export async function generateStaticParams() {
   return users.map((user) => ({ userId: `${user.id}` }));
 }
 
+// NOTE: SSG (can revalidate on demand)
 export default async function UserDetailPage({
   params,
 }: {

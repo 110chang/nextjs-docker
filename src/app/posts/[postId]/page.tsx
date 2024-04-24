@@ -7,6 +7,7 @@ export async function generateStaticParams() {
   }));
 }
 
+// NOTE: SSG (revalidate in 10s)
 export default async function PostDetailPage({
   params,
 }: {

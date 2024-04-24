@@ -1,5 +1,6 @@
 import { fetchTodo } from "@/lib/api";
 
+// NOTE: SSR
 export default async function TodoDetailPage({
   params,
 }: {

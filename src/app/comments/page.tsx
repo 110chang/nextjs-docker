@@ -5,6 +5,7 @@ const CommentList = dynamic(() => import("./_features/CommentList"), {
   ssr: false,
 });
 
+// NOTE: SSG + force CSR
 export default async function CommentsPage() {
   return (
     <main>

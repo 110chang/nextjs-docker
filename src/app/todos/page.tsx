@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { fetchTodos } from "@/lib/api";
 
+// NOTE: SSR
 export default async function TodosPage() {
   console.log("todos page");
   const todos = await fetchTodos();

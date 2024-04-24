@@ -1,5 +1,7 @@
 export async function fetchPosts() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts", {
+    next: { revalidate: 10 },
+  });
   const posts: Post[] = await res.json();
   return posts;
 }
@@ -23,7 +25,10 @@ export async function fetchTodos() {
 
 export async function fetchTodo(todoId: string) {
   const res = await fetch(
-    `https://jsonplaceholder.typicode.com/todos/${todoId}`
+    `https://jsonplaceholder.typicode.com/todos/${todoId}`,
+    {
+      cache: "no-store",
+    }
   );
   const todo: Todo = await res.json();
   return todo;

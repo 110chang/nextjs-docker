@@ -1,5 +1,6 @@
 import { fetchComment } from "@/lib/api";
 
+// NOTE: SSR
 export default async function CommentDetailPage({
   params,
 }: {

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { fetchUsers } from "@/lib/api";
 
+// NOTE: SSG (can revalidate on demand)
 export default async function UsersPage() {
   console.log("users page");
   const users = await fetchUsers();

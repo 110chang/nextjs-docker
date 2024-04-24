@@ -15,6 +15,7 @@ export default async function Home() {
   return (
     <main>
       <h1 className="text-4xl">Home</h1>
+      <h2 className="text-2xl">Local image and blur data</h2>
       <Image
         src={myImage}
         alt=""
