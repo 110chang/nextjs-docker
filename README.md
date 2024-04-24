@@ -1,4 +1,4 @@
-# Next.jsをDockerコンテナで実行するサンプル
+# Next.js を Docker コンテナで実行するサンプル
 
 検証用なので本番環境などで利用しないでください。
 
@@ -31,7 +31,7 @@ Docker version 24.0.2, build cb74dfc
 
 ### デーモン化する場合
 
-Dockerをバックグラウンドで実行し、他の作業ができるようにします。プロセスやポートを専有し続けるので、使い終わったら必ず停止してください。
+Docker をバックグラウンドで実行し、他の作業ができるようにします。プロセスやポートを専有し続けるので、使い終わったら必ず停止してください。
 
 ```sh
 % docker run -p 3000:3000 --rm -d nextjs-docker
@@ -51,7 +51,7 @@ Dockerをバックグラウンドで実行し、他の作業ができるよう�
 
 #### 実行中のコンテナのログを取得する
 
-この環境ではNext.jsの実行ログが表示されます。
+この環境では Next.js の実行ログが表示されます。
 
 ```sh
 % docker logs -tf 5be76b806d6f
@@ -75,6 +75,17 @@ Dockerをバックグラウンドで実行し、他の作業ができるよう�
 ```sh
 % docker stop 5be76b806d6f
 ```
+
+## ベーシック認証
+
+middleware の検証のためベーシック認証が有効になっています。
+
+- user
+- password
+
+### ベーシック認証のログアウト
+
+http://user@localhost:3000 にアクセスしてください。
 
 # Original Next.js README
 
@@ -114,4 +125,3 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
