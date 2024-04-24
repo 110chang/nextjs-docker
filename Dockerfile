@@ -13,6 +13,10 @@ WORKDIR /app
 ENV NODE_ENV production
 ENV NEXT_TELEMETRY_DISABLE 1
 
+ENV BASIC_AUTH_USER="user"
+ENV BASIC_AUTH_PASSWORD="password"
+ENV ENABLE_BASIC_AUTH="true"
+
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
