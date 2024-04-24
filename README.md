@@ -27,6 +27,55 @@ Docker version 24.0.2, build cb74dfc
 % docker run -p 3000:3000 --rm nextjs-docker
 ```
 
+この場合、 http://localhost:3000 で確認できます。 `Ctrl`+`C`で停止します。
+
+### デーモン化する場合
+
+Dockerをバックグラウンドで実行し、他の作業ができるようにします。
+
+```sh
+% docker run -p 3000:3000 --rm -d nextjs-docker
+```
+
+- https://docs.docker.jp/engine/reference/commandline/run.html
+
+#### 実行中のコンテナの情報を表示する
+
+```sh
+% docker ps
+# CONTAINER ID   IMAGE           COMMAND                   CREATED         STATUS
+# 5be76b806d6f   nextjs-docker   "docker-entrypoint.s…"   5 seconds ago   Up 4 seconds
+```
+
+- https://docs.docker.jp/engine/reference/commandline/ps.html
+
+#### 実行中のコンテナのログを取得する
+
+この環境ではNext.jsの実行ログが表示されます。
+
+```sh
+% docker logs -tf 5be76b806d6f
+```
+
+- https://docs.docker.jp/engine/reference/commandline/logs.html
+
+#### 実行中のコンテナにログイン
+
+コンテナ内部でシェルを実行します。
+
+```sh
+% docker exec -it 5be76b806d6f sh
+# /app $
+```
+
+- https://docs.docker.jp/engine/reference/commandline/exec.html
+
+#### コンテナを停止する
+
+```sh
+% docker stop 5be76b806d6f
+```
+
 # Original Next.js README
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
