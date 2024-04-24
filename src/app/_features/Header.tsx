@@ -11,6 +11,7 @@ export default function Header() {
       <nav className="flex gap-2 ml-4">
         <Link href="/posts">Posts</Link>
         <Link href="/todos">Todos</Link>
+        <Link href="/comments">Comments</Link>
       </nav>
     </header>
   );

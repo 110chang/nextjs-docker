@@ -28,3 +28,17 @@ export async function fetchTodo(todoId: string) {
   const todo: Todo = await res.json();
   return todo;
 }
+
+export async function fetchComments() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/comments");
+  const comments: PostComment[] = await res.json();
+  return comments;
+}
+
+export async function fetchComment(commentId: string) {
+  const res = await fetch(
+    `https://jsonplaceholder.typicode.com/comments/${commentId}`
+  );
+  const comment: PostComment = await res.json();
+  return comment;
+}
