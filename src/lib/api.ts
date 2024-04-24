@@ -6,7 +6,8 @@ export async function fetchPosts() {
 
 export async function fetchPost(postId: string) {
   const res = await fetch(
-    `https://jsonplaceholder.typicode.com/posts/${postId}`
+    `https://jsonplaceholder.typicode.com/posts/${postId}`,
+    { next: { revalidate: 10 } }
   );
   const post: Post = await res.json();
   return post;
