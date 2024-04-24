@@ -19,3 +19,11 @@ declare interface PostComment {
   email: string;
   body: string;
 }
+
+declare interface User {
+  id: number;
+  name: string;
+  username: string;
+  email: string;
+  phone: string;
+}

@@ -12,6 +12,7 @@ export default function Header() {
         <Link href="/posts">Posts</Link>
         <Link href="/todos">Todos</Link>
         <Link href="/comments">Comments</Link>
+        <Link href="/users">Users</Link>
       </nav>
     </header>
   );

@@ -42,3 +42,17 @@ export async function fetchComment(commentId: string) {
   const comment: PostComment = await res.json();
   return comment;
 }
+
+export async function fetchUsers() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const users: User[] = await res.json();
+  return users;
+}
+
+export async function fetchUser(userId: string) {
+  const res = await fetch(
+    `https://jsonplaceholder.typicode.com/users/${userId}`
+  );
+  const user: User = await res.json();
+  return user;
+}
