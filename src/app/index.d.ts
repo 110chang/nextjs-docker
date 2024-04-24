@@ -4,3 +4,10 @@ declare interface Post {
   title: string;
   body: string;
 }
+
+declare interface Todo {
+  userId: number;
+  id: number;
+  title: string;
+  completed: boolean;
+}
