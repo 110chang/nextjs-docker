@@ -1,10 +1,12 @@
-import { fetchPost, fetchPosts } from "@/lib/api";
+import { fetchPost } from "@/lib/api";
 
 export async function generateStaticParams() {
-  const posts = await fetchPosts();
-  return posts.map((post) => ({
-    postId: `${post.id}`,
-  }));
+  // NOTE: ビルド時の生成を避けつつISRを有効にするにはgenerateStaticParamsで空の配列を返す
+  // const posts = await fetchPosts();
+  // return posts.map((post) => ({
+  //   postId: `${post.id}`,
+  // }));
+  return [];
 }
 
 // NOTE: SSG (revalidate in 10s)
