@@ -54,6 +54,7 @@ Docker をバックグラウンドで実行し、他の作業ができるよう�
 この環境では Next.js の実行ログが表示されます。
 
 ```sh
+# docker psなどでContainer Idを取得してください
 % docker logs -tf 5be76b806d6f
 ```
 
@@ -64,6 +65,7 @@ Docker をバックグラウンドで実行し、他の作業ができるよう�
 コンテナ内部でシェルを実行します。
 
 ```sh
+# docker psなどでContainer Idを取得してください
 % docker exec -it 5be76b806d6f sh
 # /app $
 ```
